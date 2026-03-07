@@ -75,4 +75,140 @@ p{
     
         
 
+
+}
+.one:active{
+    border-color:rgb(52, 52, 149);
+
+}
+.two:active{
+    border-color:rgb(52, 52, 149);
+}
+.three:active{
+    border-color:rgb(52, 52, 149);
+}
+/* ================= DESKTOP (default already in rps.css) ================= */
+
+
+/* ================= LAPTOPS ================= */
+@media (max-width:1200px){
+
+.title{
+    font-size:50px;
+    margin-left:20%;
+}
+
+.one{
+    margin-left:250px;
+}
+
+.two,.three{
+    margin-left:60px;
+}
+
+.four{
+    margin-left:450px;
+}
+
+}
+
+
+/* ================= TABLETS ================= */
+@media (max-width:900px){
+
+.title{
+    font-size:40px;
+    margin-left:15%;
+}
+
+.one,.two,.three{
+    width:120px;
+    height:120px;
+}
+
+.one{
+    margin-left:120px;
+}
+
+.two,.three{
+    margin-left:40px;
+}
+
+p{
+    font-size:24px;
+}
+
+.four{
+    margin-left:300px;
+    font-size:22px;
+}
+
+}
+
+
+
+/* ================= LARGE PHONES ================= */
+@media (max-width:600px){
+
+.title{
+    font-size:28px;
+    margin-left:10%;
+    text-align:center;
+}
+
+.one,.two,.three{
+    width:100px;
+    height:100px;
+}
+
+.one{
+    margin-left:40px;
+}
+
+.two,.three{
+    margin-left:20px;
+}
+
+p{
+    font-size:20px;
+}
+
+.four{
+    margin-left:150px;
+    font-size:18px;
+}
+
+}
+
+
+/* ================= SMALL PHONES ================= */
+@media (max-width:400px){
+
+.title{
+    font-size:22px;
+    margin-left:5%;
+}
+
+.one,.two,.three{
+    width:80px;
+    height:80px;
+}
+
+.one{
+    margin-left:15px;
+}
+
+.two,.three{
+    margin-left:10px;
+}
+
+p{
+    font-size:16px;
+}
+
+.four{
+    margin-left:80px;
+    font-size:16px;
+}
+
 }
