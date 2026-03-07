@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rps.css">
+</head>
+<body>
+<p class="title">ROCK PAPER SCISSOR</p>
+
+
+
+
+
+<button
+onclick="
+ abc();
+ playermove('rock');
+    
+   
+    "
+
+ class="one">ROCK</button>
+<button
+onclick="
+ 
+  abc();
+  playermove('paper');
+  
+  
+"
+ class="two">PAPER</button>
+<button
+onclick="
+  abc();
+  playermove('scissor');
+  
+"
+class="three">SCISSOR</button>
+
+
+
+
+<div class="scoreboard">
+<p class="results">Result:</p>
+<p class="decision">Decision:</p>
+<p class="score">Wins: 0 Losses: 0 Ties: 0</p>
+</div>
+
+<button onclick="score.wins = 0; score.ties = 0; score.losses = 0;
+document.querySelector('.score').textContent = `Wins: 0 Losses: 0 Ties: 0`;
+document.querySelector('.results').textContent = `Result:`;
+document.querySelector('.decision').textContent = `Decision:`;
+"class="four"
+>Reset score</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+  const score = {
+  wins:0,
+  losses:0,
+  ties:0
+};
+  let result='';
+  let computermove='';
+  
+  
+  function abc(){
+    
+  
+  let a=Math.random();
+  
+  if(a>=0 && a< 1/3){
+    computermove='rock';
+  }
+  else if(a>=1/3 && a<2/3){
+    computermove='paper';
+
+  }
+  else{
+     computermove='scissor';
+  }
+  return computermove;
+    }
+
+    function playermove(playermove){
+      if(playermove==='scissor'){
+            if(computermove==='scissor'){
+            console.log('tie');
+            console.log(`you choose scissor and computer choose ${computermove}`);
+            result='tie';
+            score.ties+=1;
+            
+            document.querySelector('.results').textContent = `Result: ${result}`;
+            document.querySelector('.decision').textContent = `You choose scissor and computer choose ${computermove}`;
+            document.querySelector('.score').textContent = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+           
+    }
+            else if(computermove==='rock'){
+              console.log('computer wins');
+              console.log(`you choose scissor and computer choose ${computermove}`);
+              result='you lose';
+              score.losses+=1;
+             
+              document.querySelector('.results').textContent = `Result: ${result}`;
+            document.querySelector('.decision').textContent = `You choose scissor and computer choose ${computermove}`;
+            document.querySelector('.score').textContent = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+              
+              
+            }
+            else if(computermove==='paper'){
+              console.log('you win');
+              console.log(`you choose scissor and computer choose ${computermove}`);
+              result='you win';
+               score.wins+=1;
+             
+              document.querySelector('.results').textContent = `Result: ${result}`;
+            document.querySelector('.decision').textContent = `You choose scissor and computer choose ${computermove}`;
+            document.querySelector('.score').textContent = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+             
+              
+              
+    }
+  }
+    else if(playermove==='paper'){
+                if(computermove==='paper'){
+                console.log('tie');
+                console.log(`you choose paper and computer choose ${computermove}`);
+                result='tie';
+                 score.ties+=1;
+                
+                document.querySelector('.results').textContent = `Result: ${result}`;
+            document.querySelector('.decision').textContent = `You choose paper and computer choose ${computermove}`;
+            document.querySelector('.score').textContent = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+               
+                
+              }
+              else if(computermove==='scissor'){
+                console.log('computer wins');
+                console.log(`you choose paper and computer choose ${computermove}`);
+                result='you lose';
+                 score.losses+=1;
+                
+                document.querySelector('.results').textContent = `Result: ${result}`;
+            document.querySelector('.decision').textContent = `You choose paper and computer choose ${computermove}`;
+            document.querySelector('.score').textContent = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+               
+                
+                
+              }
+              else if(computermove==='rock'){
+                console.log('you win');
+                console.log(`you choose paper and computer choose ${computermove}`);
+                result='you win';
+                score.wins+=1;
+                
+                document.querySelector('.results').textContent = `Result: ${result}`;
+            document.querySelector('.decision').textContent = `You choose paper and computer choose ${computermove}`;
+            document.querySelector('.score').textContent = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+                
+               
+                
+              }
+            }
+    else{
+                  if(computermove==='rock'){
+                  console.log('tie');
+                  console.log(`you choose rock and computer choose ${computermove}`);
+                  result='tie';
+                  score.ties+=1;
+                
+                  document.querySelector('.results').textContent = `Result: ${result}`;
+            document.querySelector('.decision').textContent = `You choose rock and computer choose ${computermove}`;
+            document.querySelector('.score').textContent = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+                  
+                 
+                  
+                }
+                else if(computermove==='paper'){
+                  console.log('computer wins');
+                  console.log(`you choose rock and computer choose ${computermove}`);
+                  result='you lose';
+                  score.losses+=1;
+                  
+                  document.querySelector('.results').textContent = `Result: ${result}`;
+            document.querySelector('.decision').textContent = `You choose rock and computer choose ${computermove}`;
+            document.querySelector('.score').textContent = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+                  
+                  
+                }
+                else if(computermove==='scissor'){
+                  console.log('you win');
+                  console.log(`you choose rock and computer choose ${computermove}`);
+                  result='you win';
+                  score.wins+=1;
+                  
+                  document.querySelector('.results').textContent = `Result: ${result}`;
+            document.querySelector('.decision').textContent = `You choose rock and computer choose ${computermove}`;
+            document.querySelector('.score').textContent = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+                  
+                  
+                }
+                }
+              }
+
+        // document.body.addEventListener('keydown',(event) =>{
+        //   if(event.key==='r'){
+        //     console.log('you pressed r');
+        //     abc();
+        //     playermove('rock');
+        //   }
+        //   else if(event.key==='p'){
+        //     abc();
+        //     playermove('paper');
+        //   }
+        //   else if(event.key==='s'){
+        //      abc();
+        //     playermove('scissor');
+
+        //   }
+
+        // })
+
+              
+
+    
+</script>
+</body>
+</html>

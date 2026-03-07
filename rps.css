@@ -1,0 +1,78 @@
+body{
+    background-color:black;
+    align-items: center;
+}
+.title{
+    color:white;
+    font-weight: bold;
+    font-size: 60px;
+    margin-left:30%;
+   
+}
+.one{
+    font-size:20px;
+    width:150px;
+    height:150px;
+    border-radius:100%;
+    margin-left:450px;
+    background-image:url("rock.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+     color:transparent;
+     border:3px solid white;}
+     
+     
+button:hover{
+    cursor: pointer;
+    opacity:0.5;
+}
+.two{
+    font-size:20px;
+    width:150px;
+    height:150px;
+    border-radius:100%;
+        margin-left:100px;
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("paper.png");
+  color:transparent;
+   border:3px solid white;
+    
+}
+    
+
+.three{
+    font-size:20px;
+    width:150px;
+    height:150px;
+    border-radius:100%;
+     margin-left:100px;
+     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("scisoor.png");
+     color:transparent;
+     border:3px solid white;
+    
+}
+p{
+    color:white;
+    font-size:30px;
+}
+.scoreboard{
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+
+}
+.four{
+    font-size:25px;
+    margin-left:700px;
+    background-color: white;
+    
+        
+
+}
